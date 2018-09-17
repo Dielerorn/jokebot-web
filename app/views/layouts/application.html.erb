@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <title>Jokebot Web</title>
+  </head>
+
+  <body>
+<!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand animated fadeIn" href="#">Jokebot Web</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <ul class="navbar-nav animated fadeIn">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fab fa-github navbar-logo"></i> Jokebot Source</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fab fa-github navbar-logo"></i> Web Source</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- /Navbar -->
+        <!-- Intentionally left this div open to fix a bug -->
+    <div class="content"
+      <%= yield %>
+    </div>
+  </body>
+</html>
