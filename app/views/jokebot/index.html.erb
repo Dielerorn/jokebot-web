@@ -9,12 +9,12 @@
 <body>
 
   <div class="jumbotron bg-accent-2 text-white mb-0 row bg-primary">
-  <div class="container animated fadeInUp col-md-8">
-    <div class="ml-auto float-md-right">
-      <%= image_tag("jokebot-avatar.png", size: "250x250",:alt => "jokebot-avatar") %>
+  <div class="container animated bounceInDown col-md-8">
+    <div class="ml-auto float-md-right animated pulse infinite">
+      <%= image_tag("jokebot-avatar.png", size: "250x250", :alt => "jokebot-avatar") %>
     </div>
       <h1 class="display-4 text-white">Jokebot Web</h1>
-      <div class="lead mb-3">Placeholder Text for Something</div>
+      <div class="lead mb-3">An interface for adding jokes, gifs, and audio to the Jokebot</div>
 
       <div class="mt-4">
         <a href="#!"
@@ -27,14 +27,58 @@
           <span>A Button</span>
         </a>
       </div>
-  </div>
+    </div>
 </div>
-  <div class="container py-5">
+  <div class="container py-5 col-md-8 animated bounceInUp">
     <h1>Header</h1>
 
     <p>A bunch of placeholder text because I dont know what to write here<br>
     <a href="https://github.com/Dielerorn/jokebot">https://github.com/Dielerorn/jokebot</a>
     </p>
+
+    <div class="card-deck py-5">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Add Joke</h4>
+          <p class="card-text">Jokes added will be put into the random pool of available jokes</p>
+          <form>
+            <div class="form-group">
+              <label for="">Joke:</label>
+              <input type="text" class="form-control" id="input" placeholder="Why did the chicken cross the road?" v-modal="jokePreview">
+            </div>
+            <button type="submit" for="" class="btn btn-primary mb-2">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Add Gif</h4>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Add Audio</h4>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
+      </div>
+    </div>
+    <h3>Your joke will look like this:</h3>
+    <div class="card discordExample">
+      <!-- !joke -->
+      <div class="card-body discordRow row">
+        <%= image_tag("discord-avatar.jpeg", size: "40x40", :alt => "discord-avatar", :class => "discordPortrait") %>
+        <h2 class="discordName">  You</h2> <time class="discordTime">Today at 12:00 PM</time>
+        !joke
+      </div>
+      <%= image_tag("discord-divider.png", size: "1200x11", :alt => "discord-divider", :class => "discordDivider") %>
+      <!-- JokeBot Response -->
+      <div class="card-body discordRow row">
+        <%= image_tag("jokebot-avatar.png", size: "40x40", :alt => "jokebot-avatar", :class => "discordPortrait") %>
+        <h2 class="discordName">  JokeBot</h2> <time class="discordTime">Today at 12:00 PM</time>
+        {{ jokePreview }}
+      </div>
+    </div>
 
   </div>
 </body>

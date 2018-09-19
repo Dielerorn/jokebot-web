@@ -17,6 +17,18 @@
 //= require jquery-ui
 //= require_self
 //= require tether
-//= require turbolinks
 //= require_tree .
 //= require bootstrap
+//= require vue
+//= require vue-router
+//= require vue-resource
+//= require vuex
+
+let data = {
+  jokePreview: 'Why did the chicken cross the road?'
+};
+
+new Vue ({
+  el: '#site',
+  data: data
+})
