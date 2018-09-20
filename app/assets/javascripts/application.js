@@ -17,18 +17,24 @@
 //= require jquery-ui
 //= require_self
 //= require tether
-//= require_tree .
+//= require turbolinks
 //= require bootstrap
 //= require vue
 //= require vue-router
 //= require vue-resource
 //= require vuex
-
-let data = {
-  jokePreview: 'Why did the chicken cross the road?'
-};
+//= require sweet-alert
+//= require_tree .
 
 new Vue ({
   el: '#site',
-  data: data
+  data = {
+    jokePreview: 'Why did the chicken cross the road?'
+  }
+
+  methods: {
+    showSuccessModal() {
+      swal("Congrats!", "You added a joke!", "success");
+    },
+  },
 })

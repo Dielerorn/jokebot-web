@@ -15,6 +15,7 @@
  *= require tether
  *= require animate
  *= require jquery-ui
+ *= require sweet-alert
  */
 @import "bootstrap";
 @import "font-awesome-sprockets";
@@ -30,6 +31,11 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+}
+
+.navbar {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 footer {
@@ -62,6 +68,12 @@ header {
 
 section {
   padding: 150px 0;
+}
+
+.bg-gradient {
+  background: #007bff;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #007bff, #0062cc);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #007bff, #0062cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .navbar {
@@ -117,11 +129,16 @@ section {
   vertical-align: baseline;
 }
 
+.discordMessage {
+
+}
+
 .discordTime {
   color: hsla(0,0%,100%,.2);
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0;
+  margin-top: 3px;
   margin-left: .3rem;
   white-space: nowrap;
 }
