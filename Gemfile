@@ -34,7 +34,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
-gem 'vuejs-rails', '~> 2.5', '>= 2.5.13'
 gem 'animate-rails', '~> 1.0', '>= 1.0.10'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
