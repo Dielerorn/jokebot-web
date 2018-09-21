@@ -30,11 +30,11 @@
   </div>
 </nav>
 <!-- /Navbar -->
-        <!-- Intentionally left this div open to fix a bug -->
-    <div id="site" class="content"
+    <div id="site" class="content">
       <%= yield %>
     </div>
-
+    <%= javascript_include_tag 'https://unpkg.com/sweetalert/dist/sweetalert.min.js', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'vue', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </body>
 </html>

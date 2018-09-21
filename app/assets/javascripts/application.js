@@ -18,14 +18,14 @@
 //= require_self
 //= require tether
 //= require bootstrap
-//= require sweet-alert
+//= require turbolinks
 //= require_tree .
 
 new Vue ({
   el: '#site',
   data: {
-    jokePreview: 'Why did the chicken cross the road?'
-  }
+    jokePreview: ''
+  },
 
   methods: {
     showSuccessModal() {

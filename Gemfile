@@ -39,7 +39,6 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'tether-rails'
 gem 'font-awesome-sass', '~> 5.3', '>= 5.3.1'
-gem 'sweet-alert'
 
 gem "better_errors"
 gem "binding_of_caller"

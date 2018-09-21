@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,7 +7,6 @@
   <title>Jokebot Web</title>
 </head>
 <body>
-
   <div class="jumbotron bg-accent-2 text-white mb-0 row bg-gradient">
   <div class="container animated bounceInDown col-md-8">
     <div class="ml-auto float-md-right animated pulse infinite">
@@ -64,7 +63,7 @@
     <p>Jokes added will be put into the random pool of available jokes</p>
     <div class="form-group">
     <div class="input-group col-xs-12">
-      <input type="text" class="form-control input-lg" placeholder="Why did the chicken cross the road?">
+      <input v-model="jokePreview" type="text" class="form-control input-lg" placeholder="Why did the chicken cross the road?">
       <span class="input-group-btn">
         <button @click="showSuccessModal" class="btn btn-success mb-2" type="submit" for=""><i class="fas fa-check"></i> Submit</button>
       </span>
